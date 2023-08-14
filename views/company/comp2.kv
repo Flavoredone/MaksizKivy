@@ -1,0 +1,47 @@
+MDScreen:
+    name: 'comp2'
+    md_bg_color: '#1C1B1F'
+    Image:
+        pos_hint: {"center_x": .5, "center_y": .5}
+        source: 'assets/company/comp_2.jpg'
+        allow_stretch: True
+        keep_ratio: True
+        size_hint: 1, 1
+
+    MDGridLayout:
+        cols: 3
+        size_hint_y: .079
+        pos_hint: {'top': 1}
+        spacing: dp(50)
+        MDCard:
+            opacity: .01
+
+        MDCard:
+            opacity: .01
+
+        MDCard:
+            opacity: .01
+            on_release:
+                root.manager.current = 'MainScreen'
+
+
+    MDGridLayout:
+        cols: 3
+        size_hint_y: .15
+        size_hint_x: .9
+        pos_hint: {'center_x': .5, 'center_y': .45}
+        spacing: dp(20)
+        MDCard:
+            opacity: .01
+            on_release:
+                root.manager.current = 'comp1'
+
+        MDCard:
+            opacity: .01
+            on_release:
+                root.manager.current = 'comp2'
+
+        MDCard:
+            opacity: .01
+            on_release:
+                root.manager.current = 'comp3'

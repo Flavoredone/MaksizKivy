@@ -1,0 +1,63 @@
+
+MDScreen:
+    name: 'search4'
+    md_bg_color: '#FFFFFF'
+    MDGridLayout:
+        cols: 1
+        MDCard:
+            md_bg_color: '#FFFFFF'
+            size_hint_y: .162
+            Image:
+                source: 'assets/search/top1.jpg'
+                pos_hint: {"top": 1}
+                allow_stretch: True
+                keep_ratio: True
+
+        MDGridLayout:
+            cols: 1
+            pos_hint: {"center_x": .5, "center_y": .5}
+            md_bg_color: '#FFFFFF'
+            spacing: dp(5)
+            Image:
+                source: 'assets/search/layer4.jpg'
+                pos_hint: {"center_x": .5, "center_y": .53}
+                allow_stretch: True
+                keep_ratio: True
+
+
+        Image:
+            source: 'assets/search/btm1.jpg'
+            size_hint_y: .13
+            pos_hint: {"center_x": .5, "bottom": 1}
+            allow_stretch: True
+            keep_ratio: True
+
+###################################################################
+
+    MDGridLayout:
+        cols: 2
+        size_hint_y: .13
+        pos_hint: {'top': 1}
+        spacing: dp(160)
+        MDCard:
+            opacity: .0
+            size_hint_y: .2
+            on_release: root.manager.current = 'search3'
+
+        MDCard:
+            opacity: .0
+            on_release: root.manager.current = 'MainScreen'
+
+    MDGridLayout:
+        cols: 2
+        size_hint: .5, .1
+        pos_hint: {"center_x": .54, "center_y": .45}
+        spacing: dp(1)
+        MDCard:
+            opacity: .0
+            size_hint_y: .2
+            on_release: root.manager.current = 'search5'
+
+        MDCard:
+            opacity: .0
+            on_release: root.manager.current = 'search2_2'

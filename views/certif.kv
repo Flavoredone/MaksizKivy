@@ -1,0 +1,35 @@
+MDScreen:
+    name: "certif_4"
+    md_bg_color: app.theme_cls.bg_darkest
+
+    Image:
+        source: 'assets/certif.jpg'
+        pos_hint: {"center_x": .5, "center_y": .5}
+        allow_stretch: True
+        keep_ratio: True
+
+    MDGridLayout:
+        cols:1
+        spacing:dp(0)
+
+        MDCard:
+            md_bg_color: app.theme_cls.bg_darkest
+            size_hint_y: .1
+
+        ElementCard:
+            size_hint_y: .2
+            on_release:
+                root.manager.current = 'MainScreen'
+
+        ElementCard:
+            size_hint_y: .6
+            on_release:
+                root.manager.current = 'certif_menu'
+        ElementCard:
+            on_release:
+                root.manager.current = 'certif_menu'
+
+        ElementCard:
+            size_hint_y: .38
+            on_release:
+                root.manager.current = 'company_1'

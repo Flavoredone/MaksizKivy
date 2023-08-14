@@ -1,0 +1,38 @@
+MDScreen:
+    name: "MainScreen"
+    md_bg_color: app.theme_cls.bg_darkest
+    Image:
+        source: 'assets/mainscreen.jpg'
+
+        pos_hint: {"center_x": .5, "center_y": .5}
+        allow_stretch: True
+        keep_ratio: True
+
+    MDGridLayout:
+        cols:1
+        spacing:dp(0)
+
+        ElementCard:
+            on_press:
+                root.manager.current = 'company_1'
+
+        ElementCard:
+            on_press:
+                root.manager.current = 'poisk_2'
+
+        ElementCard:
+            on_press:
+                root.manager.current = 'cataloge_3'
+
+        ElementCard:
+            on_press:
+                root.manager.current = 'certif_4'
+
+
+<ElementCard@MDCard>:
+    padding:dp(15)
+    spacing:dp(15)
+
+    ripple_behavior: True
+    opacity: 0.2
+    orientation:'vertical'

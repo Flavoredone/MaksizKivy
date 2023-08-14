@@ -1,0 +1,70 @@
+MDScreen:
+#    on_enter:
+    target: grid_img
+    name: 'search_result'
+    md_bg_color: '#FFFFFF'
+    MDGridLayout:
+        cols: 1
+        MDCard:
+            md_bg_color: '#FFFFFF'
+            size_hint_y: .162
+            Image:
+                source: 'assets/search/top2.jpg'
+                pos_hint: {"top": 1}
+                allow_stretch: True
+                keep_ratio: True
+
+        MDGridLayout:
+            cols: 1
+            pos_hint: {"center_x": .5, "center_y": .5}
+            md_bg_color: '#FFFFFF'
+            ScrollView:
+                do_scroll_y: True
+                size: self.size
+                ResGrid:
+                    id: grid_img
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    width: self.minimum_width
+
+
+        Image:
+            source: 'assets/search/btm1.jpg'
+            size_hint_y: .13
+            pos_hint: {"center_x": .5, "bottom": 1}
+            allow_stretch: True
+            keep_ratio: True
+
+###################################################################
+
+    MDGridLayout:
+        cols: 2
+        size_hint_y: .13
+        pos_hint: {'top': 1}
+        spacing: dp(160)
+        MDCard:
+            opacity: .01
+            size_hint_y: .2
+            on_release: root.manager.current = 'search1'
+
+        MDCard:
+            opacity: .01
+            on_release: root.manager.current = 'MainScreen'
+
+    MDGridLayout:
+        cols: 2
+        size_hint_y: .15
+        pos_hint: {"center_x": .5, "center_y": .49}
+        spacing: dp(15)
+        MDCard:
+            opacity: .01
+            size_hint_y: .2
+#                on_release: root.manager.current = 'search2'
+
+        MDCard:
+            opacity: .01
+#                on_release: root.manager.current = 'search2_2'
+
+
+<ResGrid>

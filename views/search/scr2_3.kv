@@ -1,0 +1,74 @@
+MDScreen:
+    on_pre_enter: app.build_view_2()
+    name: 'search2_3'
+    md_bg_color: '#FFFFFF'
+    MDGridLayout:
+        cols: 1
+        MDCard:
+            md_bg_color: '#FFFFFF'
+            size_hint_y: .162
+            Image:
+                source: 'assets/search/top1.jpg'
+                pos_hint: {"top": 1}
+                allow_stretch: True
+                keep_ratio: True
+
+        MDGridLayout:
+            cols: 1
+            pos_hint: {"center_x": .5, "center_y": .5}
+            md_bg_color: '#FFFFFF'
+            spacing: dp(5)
+            Image:
+                source: 'assets/search/layer2_3.jpg'
+                pos_hint: {"center_x": .5, "center_y": .53}
+                allow_stretch: True
+                keep_ratio: True
+
+
+        Image:
+            source: 'assets/search/btm1.jpg'
+            size_hint_y: .13
+            pos_hint: {"center_x": .5, "bottom": 1}
+            allow_stretch: True
+            keep_ratio: True
+
+    MDDropDownItem:
+        id: stuff
+        text: "Деятельность"
+        font_size: '18sp'
+        opacity: 0
+        pos_hint: {"center_x": .9, "center_y": .5}
+        on_release: app.menu_2.open()
+        size_hint_x: 2
+    MDLabel:
+        text: stuff.text
+        pos_hint: {"center_x": .5, "center_y": .5}
+        halign: 'center'
+#        size_hint_x: .9
+
+#################################################################
+
+    MDGridLayout:
+        cols: 2
+        size_hint_y: .13
+        pos_hint: {'top': 1}
+        spacing: dp(160)
+        MDCard:
+            opacity: .0
+            size_hint_y: .2
+            on_release: root.manager.current = 'search1'
+
+        MDCard:
+            opacity: .0
+            on_release: root.manager.current = 'MainScreen'
+
+    MDGridLayout:
+        cols: 1
+        size_hint_y: .05
+        size_hint_x: .8
+        pos_hint: {"center_x": .5, "center_y": .42}
+        spacing: dp(15)
+        MDCard:
+            opacity: .0
+            size_hint_y: .2
+            on_release: root.manager.current = 'search5'
