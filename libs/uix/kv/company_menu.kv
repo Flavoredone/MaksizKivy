@@ -1,0 +1,70 @@
+<CompanyMenu>
+    MDFloatLayout:
+        md_bg_color: '#333333'
+        FloatLayout:
+            Image:
+                pos_hint: {"center_x": .5, "center_y": .5}
+                source: 'assets/company/comp_menu.jpg'
+                allow_stretch: True
+                keep_ratio: True
+                size_hint: 1, 1
+            BNav:
+
+        MDGridLayout:
+            cols: 3
+            size_hint_y: .079
+            pos_hint: {'top': 1}
+            spacing: dp(50)
+            MDCard:
+                opacity: .0
+                on_release:
+                    root.manager.push('main_screen', 'right')
+
+            MDCard:
+                opacity: .0
+
+            MDCard:
+                opacity: .0
+
+        MDGridLayout:
+            cols: 3
+            size_hint_y: .1
+            size_hint_x: .9
+            pos_hint: {'center_x': .5, 'center_y': .13}
+            spacing: dp(10)
+            MDCard:
+                opacity: .0
+                on_release:
+                    root.manager.push('comp1')
+
+            MDCard:
+                opacity: .0
+                on_release:
+                    root.manager.push('comp2')
+
+            MDCard:
+                opacity: .0
+                on_release:
+                    root.manager.push('comp3')
+
+        GridLayout:
+            cols: 5
+            size_hint_y: .07
+            spacing: dp(5)
+            pos_hint: {"center_x": .5, "center_y": .05}
+            MDCard:
+                opacity: 0.0
+                on_release:
+                    root.manager.push("company_menu")
+            MDCard:
+                opacity: 0.0
+                on_release: root.manager.push("search1")
+            MDCard:
+                opacity: 0.0
+                on_release: root.manager.push("certif_menu")
+            MDCard:
+                opacity: 0.0
+                on_release: root.manager.push("cat_menu")
+            MDCard:
+                opacity: 0.0
+                on_release: root.manager.push("where")

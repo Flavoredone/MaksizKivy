@@ -1,0 +1,162 @@
+{
+    "main_screen": {
+        "import": "from libs.uix.baseclass.main_screen import MainScreen",
+        "object": "MainScreen()",
+        "kv": "libs/uix/kv/main_screen.kv"
+    },
+    "o_kompanii": {
+        "import": "from libs.uix.baseclass.o_kompanii import OKompanii",
+        "object": "OKompanii()",
+        "kv": "libs/uix/kv/o_kompanii.kv"
+    },
+    "poisk": {
+        "import": "from libs.uix.baseclass.poisk import Poisk",
+        "object": "Poisk()",
+        "kv": "libs/uix/kv/poisk.kv"
+    },
+    "catalogue": {
+        "import": "from libs.uix.baseclass.catalogue import Catalogue",
+        "object": "Catalogue()",
+        "kv": "libs/uix/kv/catalogue.kv"
+    },
+    "certif": {
+        "import": "from libs.uix.baseclass.certif import Certif",
+        "object": "Certif()",
+        "kv": "libs/uix/kv/certif.kv"
+    },
+    "company_menu": {
+        "import": "from libs.uix.baseclass.company_menu import CompanyMenu",
+        "object": "CompanyMenu()",
+        "kv": "libs/uix/kv/company_menu.kv"
+    },
+    "comp1": {
+        "import": "from libs.uix.baseclass.comp1 import Comp1",
+        "object": "Comp1()",
+        "kv": "libs/uix/kv/comp1.kv"
+    },
+    "comp2": {
+        "import": "from libs.uix.baseclass.comp2 import Comp2",
+        "object": "Comp2()",
+        "kv": "libs/uix/kv/comp2.kv"
+    },
+    "comp3": {
+        "import": "from libs.uix.baseclass.comp3 import Comp3",
+        "object": "Comp3()",
+        "kv": "libs/uix/kv/comp3.kv"
+    },
+    "result": {
+        "import": "from libs.uix.baseclass.search.result import Result",
+        "object": "Result()",
+        "kv": "libs/uix/kv/search/result.kv"
+    },
+    "search1": {
+        "import": "from libs.uix.baseclass.search.scr1 import Scr1",
+        "object": "Scr1()",
+        "kv": "libs/uix/kv/search/scr1.kv"
+    },
+    "search2": {
+        "import": "from libs.uix.baseclass.search.scr2 import Scr2",
+        "object": "Scr2()",
+        "kv": "libs/uix/kv/search/scr2.kv"
+    },
+    "search2_2": {
+        "import": "from libs.uix.baseclass.search.scr2_2 import Scr2_2",
+        "object": "Scr2_2()",
+        "kv": "libs/uix/kv/search/scr2_2.kv"
+    },
+    "search3": {
+        "import": "from libs.uix.baseclass.search.scr3 import Scr3",
+        "object": "Scr3()",
+        "kv": "libs/uix/kv/search/scr3.kv"
+    },
+    "search4": {
+        "import": "from libs.uix.baseclass.search.scr4 import Scr4",
+        "object": "Scr4()",
+        "kv": "libs/uix/kv/search/scr4.kv"
+    },
+    "search5": {
+        "import": "from libs.uix.baseclass.search.scr5 import Scr5",
+        "object": "Scr5()",
+        "kv": "libs/uix/kv/search/scr5.kv"
+    },
+    "cat_menu": {
+        "import": "from libs.uix.baseclass.cataloge.cat_menu import CatMenu",
+        "object": "CatMenu()",
+        "kv": "libs/uix/kv/cataloge/cat_menu.kv"
+    },
+    "comb_menu": {
+        "import": "from libs.uix.baseclass.cataloge.comb_menu import CombMenu",
+        "object": "CombMenu()",
+        "kv": "libs/uix/kv/cataloge/comb_menu.kv"
+    },
+    "gl_menu": {
+        "import": "from libs.uix.baseclass.cataloge.gl_menu import GlMenu",
+        "object": "GlMenu()",
+        "kv": "libs/uix/kv/cataloge/gl_menu.kv"
+    },
+    "cat1": {
+        "import": "from libs.uix.baseclass.cataloge.cat1 import Cat1",
+        "object": "Cat1()",
+        "kv": "libs/uix/kv/cataloge/cat1.kv"
+    },
+    "cat2": {
+        "import": "from libs.uix.baseclass.cataloge.cat2 import Cat2",
+        "object": "Cat2()",
+        "kv": "libs/uix/kv/cataloge/cat2.kv"
+    },
+    "cat3": {
+        "import": "from libs.uix.baseclass.cataloge.cat3 import Cat3",
+        "object": "Cat3()",
+        "kv": "libs/uix/kv/cataloge/cat3.kv"
+    },
+    "cat4": {
+        "import": "from libs.uix.baseclass.cataloge.cat4 import Cat4",
+        "object": "Cat4()",
+        "kv": "libs/uix/kv/cataloge/cat4.kv"
+    },
+    "cat5": {
+        "import": "from libs.uix.baseclass.cataloge.cat5 import Cat5",
+        "object": "Cat5()",
+        "kv": "libs/uix/kv/cataloge/cat5.kv"
+    },
+    "cat6": {
+        "import": "from libs.uix.baseclass.cataloge.cat6 import Cat6",
+        "object": "Cat6()",
+        "kv": "libs/uix/kv/cataloge/cat6.kv"
+    },
+    "cat7": {
+        "import": "from libs.uix.baseclass.cataloge.cat7 import Cat7",
+        "object": "Cat7()",
+        "kv": "libs/uix/kv/cataloge/cat7.kv"
+    },
+    "gl1": {
+        "import": "from libs.uix.baseclass.cataloge.gloves.cat1 import Gl1",
+        "object": "Gl1()",
+        "kv": "libs/uix/kv/cataloge/gloves/cat1.kv"
+    },
+    "gl2": {
+        "import": "from libs.uix.baseclass.cataloge.gloves.cat2 import Gl2",
+        "object": "Gl2()",
+        "kv": "libs/uix/kv/cataloge/gloves/cat2.kv"
+    },
+    "gl3": {
+        "import": "from libs.uix.baseclass.cataloge.gloves.cat3 import Gl3",
+        "object": "Gl3()",
+        "kv": "libs/uix/kv/cataloge/gloves/cat3.kv"
+    },
+    "der": {
+        "import": "from libs.uix.baseclass.cataloge.gloves.der import Der",
+        "object": "Der()",
+        "kv": "libs/uix/kv/cataloge/gloves/der.kv"
+    },
+    "certif_menu": {
+        "import": "from libs.uix.baseclass.certif_menu import CertifMenu",
+        "object": "CertifMenu()",
+        "kv": "libs/uix/kv/certif_menu.kv"
+    },
+    "where": {
+        "import": "from libs.uix.baseclass.where import Where",
+        "object": "Where()",
+        "kv": "libs/uix/kv/where.kv"
+    }
+}

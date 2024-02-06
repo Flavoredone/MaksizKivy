@@ -1,0 +1,77 @@
+<Der>
+    name: "der"
+    md_bg_color: '#333333'
+
+    MDGridLayout:
+        cols:1
+        md_bg_color: '#333333'
+        Image:
+            source: 'assets/cataloge/other/der.jpg'
+#            size_hint_y: .2735
+            size_hint_y: .15
+            pos_hint: {"center_x": .5, "center_y": .5}
+            allow_stretch: True
+            keep_ratio: True
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDGridLayout:
+                cols: 1
+                size_hint: 1, 6169/1170*.55
+                spacing: dp(0)
+                Image:
+                    source: "assets/cataloge/other/der1_1.jpg"
+                    keep_ratio: True
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    #2.27
+                    size_hint: 1, 3100/1170
+                Image:
+                    source: "assets/cataloge/other/der1_2.jpg"
+                    keep_ratio: True
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    #1.85
+                    size_hint: 1, 3069/1170
+        BNav:
+            size_hint_y: .08
+
+    MDGridLayout:
+        cols: 3
+        size_hint_y: .079
+        pos_hint: {'top': 1}
+        spacing: dp(50)
+        MDCard:
+            opacity: .01
+            size_hint_y: .2
+            on_release:
+                root.manager.push('cat_menu', 'right')
+
+        MDCard:
+            opacity: .01
+
+        MDCard:
+            opacity: .01
+            on_release:
+                root.manager.push('main_screen', 'right')
+
+    GridLayout:
+        cols: 5
+        size_hint_y: .07
+        spacing: dp(5)
+        pos_hint: {"center_x": .5, "center_y": .05}
+        MDCard:
+            opacity: 0.0
+            on_release:
+                root.manager.push("company_menu")
+        MDCard:
+            opacity: 0.0
+            on_release: root.manager.push("search1")
+        MDCard:
+            opacity: 0.0
+            on_release: root.manager.push("certif_menu")
+        MDCard:
+            opacity: 0.0
+            on_release: root.manager.push("cat_menu")
+        MDCard:
+            opacity: 0.0
+            on_release: root.manager.push("where")

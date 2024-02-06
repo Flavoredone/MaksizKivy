@@ -1,0 +1,91 @@
+#: import MDCard kivymd.uix.card
+
+<MainScreen>
+    MDFloatLayout:
+        md_bg_color: '#333333'
+        FloatLayout:
+            Image:
+                source: 'assets/mainscreen.jpg'
+                pos_hint: {"center_x": .5, "center_y": .5}
+                allow_stretch: True
+                keep_ratio: True
+
+###########################################################################
+        GridLayout:
+            cols:1
+            spacing:dp(12)
+            size_hint_x: .9
+            size_hint_y: .9
+            pos_hint: {"center_x": .5, "center_y": .5}
+            ElementCard:
+                size_hint_y: 1
+                on_release: root.manager.push("company_menu")
+
+            ElementCard:
+                size_hint_y: 1
+                on_release: root.manager.push("search1")
+
+            ElementCard:
+                on_release: root.manager.push("cat_menu")
+
+            ElementCard:
+                size_hint_y: 1
+                on_release: root.manager.push("certif_menu")
+
+            ElementCard:
+                size_hint_y: 1
+                on_release: root.manager.push("where")
+
+<ElementCard@MDCard>:
+    padding:dp(0)
+    spacing:dp(15)
+
+    ripple_behavior: True
+    opacity: 0.0
+    orientation:'vertical'
+
+<BLabel@MDLabel>
+    font_size: '12sp'
+    font_name: "Teko"
+    halign: 'center'
+    pos_hint: {"center_y": .3, "center_x": 0.5}
+    theme_text_color: "Custom"
+    text_color: "#FFFFFF"
+
+<BNav@MDGridLayout>
+    size_hint_y: .07
+    spacing: dp(0)
+    cols: 5
+    md_bg_color: '#333333'
+    FloatLayout:
+        MDIcon:
+            icon: "information"
+            pos_hint: {"top": .9, "center_x": 0.5}
+        BLabel:
+            text: "О компании"
+    FloatLayout:
+        MDIcon:
+            icon: "text-search-variant"
+            pos_hint: {"top": .9, "center_x": 0.5}
+        BLabel:
+            text: "Поиск"
+    FloatLayout:
+        MDIcon:
+            icon: "file-document"
+            pos_hint: {"top": .9, "center_x": 0.5}
+        BLabel:
+            text: "Документация"
+    FloatLayout:
+        MDIcon:
+            icon: "view-list"
+            pos_hint: {"top": .9, "center_x": 0.5}
+        BLabel:
+            text: "Каталог"
+    FloatLayout:
+        MDIcon:
+            icon: "account-box-outline"
+            pos_hint: {"top": .9, "center_x": 0.5}
+        BLabel:
+            text: "Где купить"
+
+

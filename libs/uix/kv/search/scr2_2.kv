@@ -1,0 +1,97 @@
+<Scr2_2>
+    on_pre_enter: app.build_view()
+    name: 'search2_2'
+    id: search2
+    md_bg_color: '#333333'
+    MDGridLayout:
+        cols: 1
+        MDCard:
+            md_bg_color: '#333333'
+            size_hint_y: .16
+            Image:
+                source: 'assets/search/top1.jpg'
+                pos_hint: {"top": 1}
+                allow_stretch: True
+                keep_ratio: False
+        MDCard:
+            radius: 0
+            md_bg_color: '#333333'
+#            size_hint_y: .162
+            Image:
+                source: 'assets/search/layer2_2.jpg'
+                pos_hint: {"center_y": .57}
+                allow_stretch: True
+                keep_ratio: True
+
+#            Image:
+#                source: 'assets/search/btm11.jpg'
+#                size_hint_y: .11
+#                pos_hint: {"center_x": .5, "center_y": .3}
+#                allow_stretch: True
+#                keep_ratio: False
+
+    BNav:
+#################################################################
+    MDDropDownItem:
+        id: otrasl
+        text: "Отрасль"
+        font_size: '18sp'
+        opacity: 0
+        pos_hint: {"center_x": .9, "center_y": .5}
+        on_release: app.menu.open()
+        size_hint_x: 2
+    MDLabel:
+        text: otrasl.text
+        opacity: 0
+        size_hint: .65, 1
+        pos_hint: {"center_x": .5, "center_y": .48}
+        halign: 'center'
+
+#################################################################
+
+    MDGridLayout:
+        cols: 2
+        size_hint_y: .11
+        pos_hint: {'top': 1}
+        spacing: dp(160)
+        MDCard:
+            opacity: .0
+            size_hint_y: .2
+            on_release: root.manager.push('search1', 'right')
+
+        MDCard:
+            opacity: .0
+            on_release: root.manager.push('main_screen', 'right')
+
+    MDGridLayout:
+        cols: 1
+        size_hint_y: .05
+        size_hint_x: .8
+        pos_hint: {"center_x": .5, "center_y": .43}
+        spacing: dp(15)
+        MDCard:
+            opacity: .0
+            size_hint_y: .25
+            on_release: root.manager.push('search4')
+
+    GridLayout:
+        cols: 5
+        size_hint_y: .07
+        spacing: dp(5)
+        pos_hint: {"center_x": .5, "center_y": .05}
+        MDCard:
+            opacity: 0.0
+            on_release:
+                root.manager.push("company_menu")
+        MDCard:
+            opacity: 0.0
+            on_release: root.manager.push("search1")
+        MDCard:
+            opacity: 0.0
+            on_release: root.manager.push("certif_menu")
+        MDCard:
+            opacity: 0.0
+            on_release: root.manager.push("cat_menu")
+        MDCard:
+            opacity: 0.0
+            on_release: root.manager.push("where")

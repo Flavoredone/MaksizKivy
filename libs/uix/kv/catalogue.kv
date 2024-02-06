@@ -1,0 +1,62 @@
+<Catalogue>
+    MDFloatLayout:
+        md_bg_color: '#333333'
+        FloatLayout:
+            Image:
+                source: 'assets/cataloge.jpg'
+                pos_hint: {"center_x": .5, "center_y": .5}
+                allow_stretch: True
+                keep_ratio: True
+            BNav:
+
+        MDGridLayout:
+            cols:1
+            spacing:dp(30)
+            size_hint_x: .8
+            pos_hint: {"center_x": .5, "center_y": .5}
+
+            ElementCard:
+                size_hint_x: .1
+                size_hint_y: 2
+
+            ElementCard:
+                size_hint_y: .6
+                on_release:
+                    root.manager.push('cat_menu')
+
+            ElementCard:
+                size_hint_y: .9
+                on_release:
+                    root.manager.push('certif', 'up')
+
+        MDGridLayout:
+            cols:1
+            spacing:dp(0)
+            size_hint_y: .05
+            pos_hint: {"top": 1}
+            ElementCard:
+                size_hint_x: .1
+                on_release:
+                    root.manager.push('main_screen', 'right')
+
+        GridLayout:
+            cols: 5
+            size_hint_y: .07
+            spacing: dp(5)
+            pos_hint: {"center_x": .5, "center_y": .05}
+            MDCard:
+                opacity: 0.2
+                on_release:
+                    root.manager.push("company_menu")
+            MDCard:
+                opacity: 0.2
+                on_release: root.manager.push("search1")
+            MDCard:
+                opacity: 0.2
+                on_release: root.manager.push("certif_menu")
+            MDCard:
+                opacity: 0.2
+                on_release: root.manager.push("cat_menu")
+            MDCard:
+                opacity: 0.2
+                on_release: root.manager.push("search1")

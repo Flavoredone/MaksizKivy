@@ -1,0 +1,161 @@
+#:import Window kivy.core.window
+#:import Snackbar kivymd.uix.snackbar.Snackbar
+
+<TouchImage>
+
+<CustomGrid>
+
+<ItemDialog>
+    pos_hint: {"center_x": .5, "center_y": .5}
+    size_hint_y: None
+    height: Window.Window.height * .8
+    width: Window.Window.width * .9
+    bg_color: '#333333'
+    MDScrollView:
+        do_scroll_x: True
+        do_scroll_y: True
+        CustomGrid:
+    MDFlatButton:
+        text:'ВЫЙТИ'
+        theme_text_color: "Custom"
+        text_color: "#FFFFFF"
+        size_hint: .4, .05
+        pos_hint: ({"center_x": .85,})
+        on_release: app.dialog_close()
+
+<CertifMenu>
+    name: 'certif_menu'
+    md_bg_color: '#333333'
+    MDScreen:
+        md_bg_color: '#333333'
+        MDGridLayout:
+            cols: 1
+            Image:
+                id: img
+                source: 'assets/certif/top.jpg'
+                size_hint_y: .16
+                pos_hint: {"top": 1}
+                allow_stretch: True
+                keep_ratio: True
+
+            MDGridLayout:
+                cols: 1
+                md_bg_color: '#333333'
+                spacing: dp(5)
+
+                MDSwiper:
+                    size_hint_y: None
+                    
+                    height: root.height - img.height - dp(40)
+                    y: root.height - self.height - img.height - dp(20)
+
+                    MDSwiperItem:
+                        MDCard:
+                            md_bg_color: '#333333'
+                            on_release:
+                                app.open_dialog('assets/certif/pdf/2.jpg', 2)
+                                Snackbar(text="ЗАГРУЗКА", duration=.6).open()
+                            Image:
+                                source: 'assets/certif/6.jpg'
+
+                    MDSwiperItem:
+                        MDCard:
+                            md_bg_color: '#333333'
+                            on_release:
+                                app.open_dialog('assets/certif/pdf/8.jpg', 2)
+                                Snackbar(text="ЗАГРУЗКА", duration=.6).open()
+
+                            Image:
+                                source: 'assets/certif/2.jpg'
+
+                    MDSwiperItem:
+                        MDCard:
+                            md_bg_color: '#333333'
+                            on_release:
+                                app.open_dialog('assets/certif/pdf/4.jpg', 2)
+                                Snackbar(text="ЗАГРУЗКА", duration=.6).open()
+                            Image:
+                                source: 'assets/certif/3.jpg'
+
+                    MDSwiperItem:
+                        MDCard:
+                            md_bg_color: '#333333'
+                            on_release:
+                                app.open_dialog('assets/certif/pdf/5.jpg', 3)
+                                Snackbar(text="ЗАГРУЗКА", duration=.6).open()
+                            Image:
+                                source: 'assets/certif/4.jpg'
+
+                    MDSwiperItem:
+                        MDCard:
+                            md_bg_color: '#333333'
+                            on_release:
+                                app.open_dialog('assets/certif/pdf/7.jpg', 2)
+                                Snackbar(text="ЗАГРУЗКА", duration=.6).open()
+                            Image:
+                                source: 'assets/certif/5.jpg'
+
+                    MDSwiperItem:
+                        MDCard:
+                            md_bg_color: '#333333'
+                            on_release:
+                                Snackbar(text="ЗАГРУЗКА", duration=.6).open()
+                                app.open_dialog('assets/certif/pdf/3.jpg', 2)
+                            Image:
+                                source: 'assets/certif/4.jpg'
+
+                    MDSwiperItem:
+                        MDCard:
+                            md_bg_color: '#333333'
+                            on_release:
+                                app.open_dialog('assets/certif/pdf/1_0.jpg', 1)
+                                Snackbar(text="ЗАГРУЗКА", duration=.6).open()
+                            Image:
+                                source: 'assets/certif/1.jpg'
+
+                    MDSwiperItem:
+                        MDCard:
+                            md_bg_color: '#333333'
+                            on_release:
+                                app.open_dialog('assets/certif/pdf/6.jpg', 2)
+                                Snackbar(text="ЗАГРУЗКА", duration=.6).open()
+                            Image:
+                                source: 'assets/certif/7.jpg'
+
+                    MDSwiperItem:
+                        MDCard:
+                            md_bg_color: '#333333'
+                            on_release:
+                                app.open_dialog('assets/certif/pdf/dec2.jpg', 1)
+                                Snackbar(text="ЗАГРУЗКА", duration=.6).open()
+                            Image:
+                                source: 'assets/certif/dec2.jpg'
+        BNav:
+
+        MDFloatLayout:
+            MDCard:
+                opacity: .0
+                on_release: root.manager.push('main_screen', 'right')
+                pos_hint: {"top": 1}
+                size_hint_y: .12
+        GridLayout:
+            cols: 5
+            size_hint_y: .07
+            spacing: dp(5)
+            pos_hint: {"center_x": .5, "center_y": .05}
+            MDCard:
+                opacity: 0.0
+                on_release:
+                    root.manager.push("company_menu")
+            MDCard:
+                opacity: 0.0
+                on_release: root.manager.push("search1")
+            MDCard:
+                opacity: 0.0
+                on_release: root.manager.push("certif_menu")
+            MDCard:
+                opacity: 0.0
+                on_release: root.manager.push("cat_menu")
+            MDCard:
+                opacity: 0.0
+                on_release: root.manager.push("where")
