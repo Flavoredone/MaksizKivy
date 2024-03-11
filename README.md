@@ -2,7 +2,7 @@
 
 Cross platform app made using Kivy and KivyMD
 
-![mainscreen](https://github.com/Flavoredone/MaksizKivy/assets/68301720/4bd31fe5-f395-42d0-a414-4aed5dcdf4f8 =100x100)
+![mainscreen <width="250"/>](https://github.com/Flavoredone/MaksizKivy/assets/68301720/4bd31fe5-f395-42d0-a414-4aed5dcdf4f8)
 
 ![o_kompanii](https://github.com/Flavoredone/MaksizKivy/assets/68301720/a6290a7c-64fd-4001-9818-f24819d7d091)
 
